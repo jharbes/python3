@@ -1,4 +1,4 @@
-<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" align="right" width="90">
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" align="right" width="110">
 
 # python3
 
