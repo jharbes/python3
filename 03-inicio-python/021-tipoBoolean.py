@@ -12,3 +12,9 @@ print(type(True))
 print(type(False))
 print(type(10 == 10))
 print(type(10 == 11))
+print(" ",bool(' ')) # True
+print('',bool('')) # False
+print(1,bool(1)) # True
+print(0,bool(0)) # False
+print(2,bool(2)) # True
+print(1,bool(1)) # True
