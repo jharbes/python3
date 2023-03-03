@@ -2,7 +2,7 @@ nome='Jorge'
 sobrenome='Nami Harbes'
 idade=39
 ano_nascimento=1983
-maior_de_idade=39>=18
+maior_de_idade=idade>=18
 altura_metros=1.82
 
 print('Nome:',nome)
