@@ -1,4 +1,3 @@
-<img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" align="right" width="90">
 <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" align="right" width="90">
 
 # python3
