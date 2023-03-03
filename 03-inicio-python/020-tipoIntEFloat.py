@@ -18,4 +18,6 @@
 # inferiu ao valor.
 print(type('Otávio'))
 print(type(0))
-print(type(1.1), type(-1.1), type(0.0))
+print(type(1.1), type(-1.1), type(0.0)) 
+print(type(True))
+print(type(str))
