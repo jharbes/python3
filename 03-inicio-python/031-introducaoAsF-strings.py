@@ -16,3 +16,8 @@ print(linha_3)
 # Luiz Otávio tem 1.80 de altura,
 # pesa 95 quilos e seu IMC é
 # 29.32
+
+nome1 = "Luiz"
+idade = 23
+formato = f'{nome1} tem {idade:.2f} anos'
+print(formato)
