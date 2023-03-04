@@ -1,6 +1,13 @@
 # if / elif      / else
 # se / se não se / se não
-# python importante usar o : (dois pontos) , parenteses sao opcionais nas condicoes e nao se usa else if e sim elif
+# 1 - python importante usar o : (dois pontos)
+
+# 2 - parenteses sao opcionais nas condicoes 
+
+# 3 - nao se usa else if e sim elif
+
+# 4 - nao se utilizam chaves para delimitar o bloco, ele sera delimitado automaticamente pela indentacao corretamente feita
+
 entrada = input('Você quer "entrar" ou "sair"? ')
 
 if (entrada == 'entrar'):
