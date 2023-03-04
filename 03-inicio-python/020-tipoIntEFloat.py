@@ -21,3 +21,5 @@ print(type(0))
 print(type(1.1), type(-1.1), type(0.0)) 
 print(type(True))
 print(type(str))
+
+print(type(4/2)) # float  => qualquer divisao sempre retorna um tipo float
