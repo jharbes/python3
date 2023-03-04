@@ -1,7 +1,7 @@
 primeiro_valor=input('Digite um valor: ')
 segundo_valor=input('Digite um valor: ')
 
-# observe que a resposta será correta mesmo sem que seja feita a conversao entre string e int/float, pois para essa comparacao o python utilizara a tabela unicode, ou seja, serve também para letras   
+# observe que a resposta será correta mesmo sem que seja feita a conversao entre string e int/float, pois para essa comparacao o python utilizara a tabela unicode, ou seja, serve também para letras (apenas para respostas com um digito, de letras ou numeros)   
 
 if primeiro_valor>segundo_valor:
     print(f'{primeiro_valor=} é maior do que {segundo_valor=}')
