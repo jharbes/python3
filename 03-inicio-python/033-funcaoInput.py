@@ -7,4 +7,8 @@ numero_2 = input('Digite outro número: ')
 int_numero_1 = int(numero_1)
 int_numero_2 = int(numero_2)
 
-print(f'A soma dos números é: {int_numero_1 + int_numero_2}')
+print(f'A soma dos números é: {int_numero_1 + int_numero_2}\n')
+
+# A maneira abaixo faz com que a impressao ocorra tanto com NOME da variavel quanto o VALOR da variavel
+print(f'O valor da variavel {int_numero_1=}')
+
