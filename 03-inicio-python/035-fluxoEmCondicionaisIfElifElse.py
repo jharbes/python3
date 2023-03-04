@@ -8,7 +8,6 @@ condicao4 = True
 
 if condicao1:
     print('Código para condição 1')
-    print('Código para condição 1')
 elif condicao2:
     print('Código para condição 2')
 elif condicao3:
