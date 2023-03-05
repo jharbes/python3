@@ -29,3 +29,8 @@ variavel = '%s, o preço é R$%.2f' % (nome, preco)
 print(variavel)
 print('O hexadecimal de %d é %08X' % (1500, 1500))
 print('O hexadecimal de %d é %x' % (1500, 1500))
+
+
+# operador ternario em python:
+
+print('deu certo') if x == 2 else print('deu errado')
