@@ -1,6 +1,17 @@
 # utilitarios python
 
 
+"""
+Tem um jeito bem simples sim
+
+Vamos fazer um passo a passo.
+
+1 - Ctrl + Shift + ' vai abrir o terminal
+2 - Ctrl + Tab vai voltar o cursor para a área do Editor
+3 - Ctrl + ' vai sai do Editor e voltar pro Terminar
+"""
+
+
 # casas decimais em string no output
 
 nome='jorge'
