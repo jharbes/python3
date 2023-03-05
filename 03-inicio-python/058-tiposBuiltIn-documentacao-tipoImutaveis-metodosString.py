@@ -9,4 +9,5 @@ print(string)
 print(outra_variavel)  # 100ABC
 
 print(string.zfill(10))  # 0000001000
-print(type(string.zfill(10)))  # string
+print(type(string.zfill(10)))  # string+
+
