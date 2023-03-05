@@ -1,10 +1,17 @@
 # utilitarios python
 
+# ambos abaixo servem apenas para guardar lugar no codigo de algo a ser digitado/desenvolvido posteriormente
+... or pass
+
+
+# confere se uma string possui APENAS números: 
+# (***CUIDADO: ele também retornará false para numeros com casas decimais como por exemplo 2.3
+
+stringQualquer.isdigit() # True ou False
+
 
 """
-Tem um jeito bem simples sim
-
-Vamos fazer um passo a passo.
+Trocar o cursor entre janelas do editor e terminal no vscode
 
 1 - Ctrl + Shift + ' vai abrir o terminal
 2 - Ctrl + Tab vai voltar o cursor para a área do Editor
