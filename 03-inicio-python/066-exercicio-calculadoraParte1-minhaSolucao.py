@@ -14,7 +14,8 @@ while True:
             print(f'{primeiroNumero} * {segundoNumero} = {primeiroNumero*segundoNumero}')
         else:
             print('Operador desconhecido')
-    except:
+    except Exception as error: # gera o erro pra que possa ser impresso
+        print(error)
         print('Serão aceitos apenas valores númericos')
 
     #########
