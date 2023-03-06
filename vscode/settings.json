@@ -118,9 +118,10 @@
     "editor.hover.sticky": false,
     "editor.hover.above": false,
     "workbench.colorTheme": "Default Dark+ Experimental",
-    "editor.inlineSuggest.enabled": false,
-    "editor.suggest.selectionMode": "whenTriggerCharacter",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.selectionMode": "always",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "editor.parameterHints.enabled": false,
-    "editor.suggestOnTriggerCharacters": false
+    "editor.suggestOnTriggerCharacters": false,
+    "debug.console.acceptSuggestionOnEnter": "on"
 }

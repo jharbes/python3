@@ -2,16 +2,20 @@
 
 frase='O Python é uma linguagem de programação multiparadigma. Python foi criado por Guido van Rossum.'
 
+fraseLowerSemEspacos=frase.lower().replace(' ','').replace('.','')
+
 contador=0
 numeroMaximoRepeticoes=0
-caracatereMaisRepetido=''
+caractereMaisRepetido=''
 
-while (len(frase)<contador):
-    letraTestada=frase[contador]
-    if frase.count(frase[contador])>numeroMaximoRepeticoes:
-        numeroMaximoRepeticoes=frase.count(frase[contador])
-        caracatereMaisRepetido=frase[contador]
+
+while (len(fraseLowerSemEspacos)>contador):
+
+    if fraseLowerSemEspacos.count(fraseLowerSemEspacos[contador])>numeroMaximoRepeticoes:
+        numeroMaximoRepeticoes=fraseLowerSemEspacos.count(fraseLowerSemEspacos[contador])
+        caractereMaisRepetido=fraseLowerSemEspacos[contador]
     contador+=1
 
-print(f'O caractere que mais apareceu foi o')
-print()
+
+print(f'A letra que mais se repetiu foi a "{caractereMaisRepetido}" que foi repetido {numeroMaximoRepeticoes} vezes')
+
