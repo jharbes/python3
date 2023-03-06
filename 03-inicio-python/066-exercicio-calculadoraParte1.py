@@ -15,7 +15,7 @@ while True:
         else:
             print('Operador desconhecido')
     except:
-        print('Serão aceitos apenas operadores númericos')
+        print('Serão aceitos apenas valores númericos')
 
     #########
     sair = input('Quer sair? [s]im: ').lower().startswith('s')
