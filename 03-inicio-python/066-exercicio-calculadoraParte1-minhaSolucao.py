@@ -15,8 +15,9 @@ while True:
         else:
             print('Operador desconhecido')
     except Exception as error: # gera o erro pra que possa ser impresso
-        print(error)
+        print(error) # imprime o erro que ocasionou a quebra do programa
         print('Serão aceitos apenas valores númericos')
+    
 
     #########
     sair = input('Quer sair? [s]im: ').lower().startswith('s')
