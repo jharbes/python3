@@ -36,6 +36,8 @@ while (len(fraseLowerSemEspacos)>contador):
 
     contador+=1
 
+
+# caso haja mais de um caractere repetido a resposta vira no plural
 if (len(caracateresRepetidos)>1):
     print(f'As letras que mais se repetiram foram as "{caractereMaisRepetido}" em um total de {numeroMaximoRepeticoes} vezes')
 else:
