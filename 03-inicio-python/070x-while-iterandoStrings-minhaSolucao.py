@@ -2,7 +2,11 @@
 
 frase='O Python é uma linguagem de programação multiparadigma. Python foi criado por Guido van Rossum.a'
 
-fraseLowerSemEspacos=frase.lower().replace(' ','').replace('.','')
+# colocando em minusculas
+fraseLowerSemEspacos=frase.lower()
+
+# retirando todos os caracteres alfanumericos da string
+fraseLowerSemEspacos=''.join(ch for ch in fraseLowerSemEspacos if ch.isalnum())
 
 contador=0
 numeroMaximoRepeticoes=0
