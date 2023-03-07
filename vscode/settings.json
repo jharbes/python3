@@ -122,6 +122,6 @@
     "editor.suggest.selectionMode": "always",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "editor.parameterHints.enabled": false,
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": true,
     "debug.console.acceptSuggestionOnEnter": "on"
 }
