@@ -14,3 +14,41 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
+
+
+palavraSecreta='gol'
+palavraSecreta=palavraSecreta.lower()
+
+password=[]
+for letra in enumerate(palavraSecreta):
+    password.append('*') 
+
+contador=0
+letrasTentandas=[]
+
+# for letra in palavraSecreta:
+#     password+='*'
+
+print("JOGO DA PALAVRA SECRETA\n")
+
+while True:
+    letraTentativa=input('Digite uma letra: ').lower()
+
+    if letraTentativa in palavraSecreta and len(letraTentativa)==1 and letraTentativa!='':
+        for indice,letra in enumerate(palavraSecreta):
+            if letraTentativa == letra:
+                password[indice]=letra
+    
+    contador+=1
+
+    print('Palavra formatada: ',end='')
+    for letra in password:
+        print(letra,end='')
+    print()
+    
+    if '*' not in password:
+        break
+
+print('PARABÉNS! Você venceu!')
+print('A palavra era ' + palavraSecreta)
+print('Tentativas:',contador)
