@@ -24,7 +24,6 @@ for letra in enumerate(palavraSecreta):
     password.append('*') 
 
 contador=0
-letrasTentandas=[]
 
 # for letra in palavraSecreta:
 #     password+='*'
