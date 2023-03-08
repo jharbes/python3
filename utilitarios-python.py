@@ -70,3 +70,9 @@ except Exception as error:
     print(error)
     ...
     
+
+
+# for em python (com indice)
+
+for indice,item in enumerate(vetorOuString):
+            print(letra)
