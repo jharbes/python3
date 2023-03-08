@@ -25,9 +25,6 @@ for letra in enumerate(palavraSecreta):
 
 contador=0
 
-# for letra in palavraSecreta:
-#     password+='*'
-
 print("JOGO DA PALAVRA SECRETA\n")
 
 while True:
