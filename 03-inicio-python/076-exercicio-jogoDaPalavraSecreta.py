@@ -15,6 +15,7 @@ Faça a contagem de tentativas do seu
 usuário.
 """
 
+import os
 
 palavraSecreta='gol'
 palavraSecreta=palavraSecreta.lower()
@@ -45,6 +46,7 @@ while True:
     if '*' not in password:
         break
 
+os.system('clear') # limpar a tela
 print('PARABÉNS! Você venceu!')
 print('A palavra era ' + palavraSecreta)
 print('Tentativas:',contador)
