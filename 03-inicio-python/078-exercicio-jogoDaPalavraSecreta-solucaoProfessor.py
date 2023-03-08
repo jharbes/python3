@@ -14,6 +14,7 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
+# import os para que possamos utilizar comandos desse modulo
 import os
 
 palavra_secreta = 'perfume'
@@ -41,7 +42,7 @@ while True:
     print('Palavra formada:', palavra_formada)
 
     if palavra_formada == palavra_secreta:
-        os.system('clear') # limpar a tela
+        os.system('clear') # limpar a tela, pode ser qualquer comando que o sistema do usuario entenda em cmd ou bash dependendo do sistema
         print('VOCÊ GANHOU!! PARABÉNS!')
         print('A palavra era', palavra_secreta)
         print('Tentativas:', numero_tentativas)

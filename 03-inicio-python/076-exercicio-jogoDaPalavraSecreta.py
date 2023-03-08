@@ -14,7 +14,7 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
-
+# import os para que possamos utilizar comandos desse modulo
 import os
 
 palavraSecreta='gol'
@@ -46,7 +46,7 @@ while True:
     if '*' not in password:
         break
 
-os.system('clear') # limpar a tela
+os.system('clear') # limpar a tela, pode ser qualquer comando que o sistema do usuario entenda em cmd ou bash dependendo do sistema
 print('PARABÉNS! Você venceu!')
 print('A palavra era ' + palavraSecreta)
 print('Tentativas:',contador)
