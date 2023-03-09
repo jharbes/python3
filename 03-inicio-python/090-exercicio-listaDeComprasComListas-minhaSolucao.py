@@ -35,10 +35,8 @@ while True:
             print()
         else:
             print('A lista está vazia.\n')
-        continue
     elif opcao=='0':
         print('\nSaindo do programa...\n')
         break
     else:
         print('\nOpção inválida.\n')
-        continue
