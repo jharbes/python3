@@ -6,7 +6,7 @@ Não permita que o programa quebre com erros de indices inexistentes na lista.
 listaCompras=[]
 
 while True:
-    print('LISTA DE COMPRAS\n')
+    print('\nLISTA DE COMPRAS\n')
     print('Opções disponíveis:')
     print('1- Inserir item na lista.')
     print('2- Excluir item da lista.')
@@ -21,12 +21,12 @@ while True:
         continue
     elif opcao=='2':
         try:
-            opcaoExclusao=input('\nSelecione o numero do item a ser excluido: ')
+            opcaoExclusao=input('\nSelecione o número do item a ser excluído: ')
             opcaoExclusao=int(opcaoExclusao)
             print(f'\nItem {listaCompras.pop(opcaoExclusao-1)} excluído com sucesso!\n')
             print()
         except:
-            print('\nNumero de item invalido!\n')
+            print('\nNúmero de item inválido!\n')
     elif opcao=='3':
         print()
         if len(listaCompras)>=1:
