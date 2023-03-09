@@ -25,7 +25,7 @@ while True:
             opcaoExclusao=int(opcaoExclusao)
             print(f'\nItem {listaCompras.pop(opcaoExclusao-1)} excluído com sucesso!\n')
             print()
-        except:
+        except: # podemos usar o except com as opcoes de tipo de erro de acordo com a solucao do professor, neste exercicio me pareceu desncessario
             print('\nNúmero de item inválido!\n')
     elif opcao=='3':
         print()
