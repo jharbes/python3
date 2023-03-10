@@ -44,7 +44,7 @@ if len(stringCpf)==14 and stringCpf[3]=='.' and stringCpf[7]=='.' and stringCpf[
             somadorCpf+=multiplicadorCpf*int(numero)
             multiplicadorCpf-=1
 
-        primeiroDigitoCpf=(somadorCpf*10)%11 if (somadorCpf*10)%11 < 9 else 0
+        primeiroDigitoCpf=(somadorCpf*10)%11 if (somadorCpf*10)%11 <= 9 else 0
 
         print('O primeiro digito do CPF digitado é',primeiroDigitoCpf)
     except:
