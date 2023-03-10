@@ -21,3 +21,42 @@ contrário disso:
     resultado é o valor da conta
 O segundo dígito do CPF é 0
 """
+
+# stringCpf=input('Digite o CPF no formato XXX.XXX.XXX-XX: ')
+stringCpf='102.310.867-41'
+
+if len(stringCpf)==14 and stringCpf[3]=='.' and stringCpf[7]=='.' and stringCpf[11]=='-':
+    try:
+        int(stringCpf[0:3])
+        int(stringCpf[4:7])
+        int(stringCpf[8:11])
+        int(stringCpf[12:14])
+
+        stringLimpa=stringCpf.replace('.','').replace('-','')
+        print(stringLimpa)
+
+        multiplicadorCpf=10
+        somadorCpf=0
+
+        for indice,numero in enumerate(stringLimpa[0:9]):
+            somadorCpf+=multiplicadorCpf*int(numero)
+            multiplicadorCpf-=1
+
+        primeiroDigitoCpf=(somadorCpf*10)%11 if (somadorCpf*10)%11 <= 9 else 0
+
+        multiplicadorCpf=11
+        somadorCpf=0
+
+        for indice,numero in enumerate(stringLimpa[0:10]):
+            somadorCpf+=multiplicadorCpf*int(numero)
+            multiplicadorCpf-=1
+
+        segundoDigitoCpf=(somadorCpf*10)%11 if (somadorCpf*10)%11 <= 9 else 0
+
+        print('O primeiro digito do CPF digitado é',primeiroDigitoCpf)
+
+        print('O segundo digito do CPF digitado é',segundoDigitoCpf)
+    except:
+        print('Número de CPF fora da conformidade, favor tentar novamente!')
+else:
+    print('Número de CPF fora da conformidade, favor tentar novamente!')
