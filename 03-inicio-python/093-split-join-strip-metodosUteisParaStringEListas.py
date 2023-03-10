@@ -21,7 +21,7 @@ print(frase) #    Olha só que   , coisa interessante
 
 print('--------------------------------------')
 
-# o metodo strip corta os espacos do comeco e do fim da string (inclusive os caracteres especiais \n \t \v \f), tambem existem os metodos lstrip e rstrip que funcionam para os espacos e caracteres especiais à esquerda da string e direita da string respectivamente
+# o metodo strip corta os espacos do comeco e do fim da string (inclusive os caracteres especiais \n \t \v \f), tambem existem os metodos LSTRIP e RSTRIP que funcionam para os espacos e caracteres especiais à ESQUERDA da string e da DIREITA da string respectivamente
 lista_frases = []
 for i, frase in enumerate(lista_frases_cruas):
     lista_frases.append(lista_frases_cruas[i].strip())
@@ -30,5 +30,9 @@ print(lista_frases) # ['Olha só que', 'coisa interessante']
 
 print('--------------------------------------')
 
+# join une os iteraveis (lista e string por exemplo) com base em algum separador a ser identificado, exemplo:
 frases_unidas = ', '.join(lista_frases)
 print(frases_unidas) # Olha só que, coisa interessante
+
+stringSeparada='-'.join('abc')
+print(stringSeparada) # a-b-c
