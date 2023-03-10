@@ -1,19 +1,4 @@
 """
-Interpretador do Python
-
-python mod.py (executa o mod)
-python -u (unbuffered)
-python -m mod (lib mod como script)
-python -c 'cmd' (comando)
-python -i mod.py (interativo com mod)
-"""
-
-# python também possui o ; (ponto e virgula) como separador de comandos que forem efetuados na mesma linha:
-
-print('oi');print('oi2')
-
-
-"""
 The Zen of Python, por Tim Peters
 
 Bonito é melhor que feio.
