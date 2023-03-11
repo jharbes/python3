@@ -26,7 +26,7 @@ def imprimir(a, b, c): # a, b, c sao parametros
 Print()
 
 imprimir(1, 2, 3) # 1, 2, 3 sao argumentos
-imprimir(4, 5, 6) # 4, 5, 6 sao argumentos
+imprimir(4, 5, 6) # 4, 5, 6 sao argumentos 
 
 # na ausencia do argumento "nome" ele usará 'Sem nome' como argumento
 def saudacao(nome='Sem nome'):
