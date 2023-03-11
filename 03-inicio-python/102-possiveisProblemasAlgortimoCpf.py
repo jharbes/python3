@@ -33,6 +33,8 @@ import sys
 #     .replace(' ', '') \
 #     .replace('-', '')
 entrada = input('CPF [746.824.890-70]: ')
+
+# aqui usamos expressoes regulares para ter o mesmo resultado que o replace acima, ele substitui tudo aquilo que nao for caractere numerico por espaco vazio
 cpf_enviado_usuario = re.sub(
     r'[^0-9]',
     '',

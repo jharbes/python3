@@ -23,17 +23,16 @@ O segundo dígito do CPF é 0
 """
 
 # stringCpf=input('Digite o CPF no formato XXX.XXX.XXX-XX: ')
-stringCpf='227.733.858-45'
+stringCpf='102.310.867-25'
 
-if len(stringCpf)==14 and stringCpf[3]=='.' and stringCpf[7]=='.' and stringCpf[11]=='-':
+stringLimpa=stringCpf.replace('.','').replace('-','')
+
+if len(stringCpf)==14 and stringCpf[3]=='.' and stringCpf[7]=='.' and stringCpf[11]=='-' and not stringLimpa==stringLimpa[0]*len(stringLimpa):
     try:
         int(stringCpf[0:3])
         int(stringCpf[4:7])
         int(stringCpf[8:11])
         int(stringCpf[12:14])
-
-        stringLimpa=stringCpf.replace('.','').replace('-','')
-        print(stringLimpa)
 
         multiplicadorCpf=10
         somadorCpf=0
