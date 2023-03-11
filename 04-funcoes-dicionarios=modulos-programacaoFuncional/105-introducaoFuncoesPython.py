@@ -9,20 +9,24 @@ Por padrão, funções Python retornam None (nada).
 """
 
 
-def Print(a, b, c):
+
+def Print():
     print('Várias1')
     print('Várias2')
     print('Várias3')
     print('Várias4')
 
-def imprimir(a, b, c):
+
+# PARAMETROS sao os valores que sao recebidos (aqui nesse caso a, b, c)
+# ARGUMENTOS sao os valores que sao passados para a funcao para que ela seja processada (no caso de baixo: 1, 2, 3)
+def imprimir(a, b, c): # a, b, c sao parametros
     print(a, b, c)
 
 
-Print(1,2,3)
+Print()
 
-imprimir(1, 2, 3)
-imprimir(4, 5, 6)
+imprimir(1, 2, 3) # 1, 2, 3 sao argumentos
+imprimir(4, 5, 6) # 4, 5, 6 sao argumentos
 
 # na ausencia do argumento "nome" ele usará 'Sem nome' como argumento
 def saudacao(nome='Sem nome'):
