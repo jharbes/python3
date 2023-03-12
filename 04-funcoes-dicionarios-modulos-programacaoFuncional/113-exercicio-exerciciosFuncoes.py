@@ -20,4 +20,9 @@ print(variavel1)
 # Crie uma função fala se um número é par ou ímpar.
 # Retorne se o número é par ou ímpar.
 
+def parOuImpar(numero):
+    return f'{numero} é um número é par' if numero%2==0 else f'{numero} é um número é ímpar'
 
+print(parOuImpar(15))
+print(parOuImpar(14))
+print(parOuImpar(-4))
