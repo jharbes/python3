@@ -8,14 +8,20 @@
 def multiplica(*args):
     totalMultiplicacao=1
     for numero in args:
-        totalMultiplicacao*=numero
+        try:
+            float(numero)
+            totalMultiplicacao*=numero
+        except:
+            print(f'Valor {numero} não é um número, ele será desconsiderado na operação')
     return totalMultiplicacao
 
 variavel1=multiplica(2,3,4,5,6)
 print(variavel1)
+print(multiplica('a',2,3,4))
+print(multiplica(5.5,3,4))
+print(multiplica('l','m',5,8.8))
 
-
-
+print('-----------------------------------')
 
 # Crie uma função fala se um número é par ou ímpar.
 # Retorne se o número é par ou ímpar.
