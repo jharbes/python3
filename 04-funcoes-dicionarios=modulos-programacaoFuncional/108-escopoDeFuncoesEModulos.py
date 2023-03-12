@@ -27,3 +27,16 @@ def escopo():
 print(x)
 escopo()
 print(x)
+
+# aparentemente nao existe escopo de lacos de repeticao como pode se ver nos exemplos abaixo em python:
+if True:
+    z=10
+
+vetor=[1,2,3]
+
+for i,item in enumerate(vetor):
+    w=item
+
+print(z) # 10
+print(i) # 2
+print(w) # 3g
