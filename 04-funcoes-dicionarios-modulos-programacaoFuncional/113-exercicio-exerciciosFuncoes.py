@@ -21,8 +21,13 @@ print(variavel1)
 # Retorne se o número é par ou ímpar.
 
 def parOuImpar(numero):
-    return f'{numero} é um número é par' if numero%2==0 else f'{numero} é um número é ímpar'
+    if isinstance(numero, int):
+        return f'{numero} é um número é par' if numero%2==0 else f'{numero} é um número é ímpar'
+    else:
+        return 'Função definida apenas para números inteiros'
 
 print(parOuImpar(15))
 print(parOuImpar(14))
 print(parOuImpar(-4))
+print(parOuImpar('a'))
+print(parOuImpar(0.5))
