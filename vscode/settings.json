@@ -50,7 +50,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "code-runner.ignoreSelection": true,
     "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.functionReturnTypes": true,
     "code-runner.respectShebang": false,
     "code-runner.executorMap": {
 
@@ -123,5 +122,7 @@
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "editor.parameterHints.enabled": false,
     "editor.suggestOnTriggerCharacters": true,
-    "debug.console.acceptSuggestionOnEnter": "on"
+    "debug.console.acceptSuggestionOnEnter": "on",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "gitlens.gitCommands.search.showResultsInSideBar": false
 }
