@@ -39,4 +39,5 @@ for i,item in enumerate(vetor):
 
 print(z) # 10
 print(i) # 2
-print(w) # 3g
+print(w) # 3
+
