@@ -18,3 +18,6 @@ perguntas = [
         'Resposta': '5',
     },
 ]
+
+for indice,item in enumerate(perguntas):
+    print(item['Pergunta']+'\n')
