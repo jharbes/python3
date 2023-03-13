@@ -16,14 +16,28 @@ pessoa = {
 }
 
 pessoa.setdefault('idade', 0)
-print(pessoa['idade'])
-# print(len(pessoa))
-# print(list(pessoa.keys()))
-# print(list(pessoa.values()))
-# print(list(pessoa.items()))
+print(pessoa['idade']) # 900
+print(len(pessoa)) # 3
 
-# for valor in pessoa.values():
-#     print(valor)
+# observe que os metodos abaixos estao sendo convertidos em lista para facilitar sua utilizacao, pois o retorno original eh o dictkeys que nao facilita muito o seu uso
 
-# for chave, valor in pessoa.items():
-#     print(chave, valor)
+print(pessoa.keys()) # dict_keys(['nome', 'sobrenome', 'idade'])
+print(list(pessoa.keys())) # ['nome', 'sobrenome', 'idade']
+
+print(pessoa.values()) # dict_values(['Luiz Otávio', 'Miranda', 900])
+print(list(pessoa.values())) # ['Luiz Otávio', 'Miranda', 900]
+
+print(pessoa.items()) # dict_items([('nome', 'Luiz Otávio'), ('sobrenome', 'Miranda'), ('idade', 900)])
+print(list(pessoa.items())) # [('nome', 'Luiz Otávio'), ('sobrenome', 'Miranda'), ('idade', 900)]
+
+print('---------------------------')
+
+# for direto, sem coercao(convesao em lista ou tupla)
+for valor in pessoa.values(): 
+    print(valor)
+
+print('---------------------------')
+
+# for direto, sem coercao(convesao em lista ou tupla)
+for chave, valor in pessoa.items():
+    print(chave, valor)
