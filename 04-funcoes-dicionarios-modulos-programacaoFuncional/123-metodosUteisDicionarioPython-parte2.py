@@ -13,21 +13,27 @@ p1 = {
     'nome': 'Luiz',
     'sobrenome': 'Miranda',
 }
-# print(p1['nome'])
-# print(p1.get('nome', 'Não existe'))
+print(p1['nome'])
+print(p1.get('nome'))
 
-# nome = p1.pop('nome')
-# print(nome)
-# print(p1)
-# ultima_chave = p1.popitem()
-# print(ultima_chave)
-# print(p1)
-# p1.update({
-#     'nome': 'novo valor',
-#     'idade': 30,
-# })
-# p1.update(nome='novo valor', idade=30)
-# tupla = (('nome', 'novo valor'), ('idade', 30))
+nome = p1.pop('nome') # retorna Luiz e exclui a chave 'nome'
+print(nome) # Luiz
+print(p1) # {'sobrenome': 'Miranda'}
+ultima_chave = p1.popitem() 
+print(ultima_chave) # ('sobrenome', 'Miranda')
+print(p1) # {}
+p1.update({ # atualiza as chaves solicitadas mas nao mexe nos valores ja existentes, tambem pode criar novas chaves
+    'nome': 'novo valor',
+    'idade': 30,
+})
+p1.update(nome='novo valor', idade=30) # outra maneira de utilizar o update
+
+p2={}
+tupla = (('nome', 'novo valor'), ('idade', 30))
+p2.update(tupla)
+
+print('---------------------------------')
+
 lista = [['nome', 'novo valor'], ['idade', 30]]
 p1.update(lista)
-print(p1)
+print(p1) # {'nome': 'novo valor', 'idade': 30}
