@@ -26,8 +26,11 @@ for indice,item in enumerate(perguntas):
     print('Opções:')
     for i1,resposta in enumerate(perguntas[indice]['Opções']):
         print(f'{i1}) {resposta}')
+    
     opcaoEscolhida=input('Escolha uma opção: ')
-    if opcaoEscolhida==perguntas[indice]['Resposta'] and opcaoEscolhida in perguntas[indice]['Opções']:
+    respostaQuestao=str(perguntas[indice]['Opções'].index(perguntas[indice]['Resposta']))
+    
+    if opcaoEscolhida==respostaQuestao:
         print('Acertou!\n')
         contadorDeAcertos+=1
     else:
