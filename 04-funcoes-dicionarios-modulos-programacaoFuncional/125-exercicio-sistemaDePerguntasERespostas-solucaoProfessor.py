@@ -35,7 +35,7 @@ for pergunta in perguntas:
     escolha_int = None
     qtd_opcoes = len(opcoes)
 
-    if escolha.isdigit():
+    if escolha.isdigit(): # metodo isdigit() retorna true se a string em questao possui apenas algarismos numericos, sem letras ou sinais (inclusive pontos), ou seja, despreza algarismos com ponto flutuante (retorna false)
         escolha_int = int(escolha)
 
     if escolha_int is not None:
