@@ -42,11 +42,24 @@ pyautogui.press('enter')
 
 ## Clicar no espaço de login e escrever o login
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!https://pages.hashtagtreinamentos.com/aula1-intensivao-sistema
-
 # utilizaremos os procedimentos abaixo para descobrir qual a posicao do mouse na tela na aba de navegacao ou qualquer outra tela desejada, o time sera o tempo habil de posicionar onde quer o mouse, depois ele ira printar o ponto exato desejado
 # time.sleep(5)
 # print(pyautogui.position())
+
 time.sleep(3)
-pyautogui.click(x=700, y=371) # vamos tentar com sequencias de tab em vez de cliques com mouse
+
+## Preenchendo o login (com clique de mouse ou tab)
+
+pyautogui.press('tab')
+# pyautogui.click(x=700, y=371) # vamos tentar com sequencias de tab em vez de cliques com mouse
 pyautogui.write('meu_login')
+
+## Preenchendo a senha (com clique de mouse ou tab)
+
+pyautogui.press('tab')
+# pyautogui.click(x=762, y=446)
+pyautogui.write('minha_senha')
+
+pyautogui.press('tab')
+# pyautogui.click(x=775, y=519)
+pyautogui.press('enter')
