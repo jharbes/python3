@@ -68,5 +68,5 @@ pyautogui.press('enter')
 
 time.sleep(3)
 
-# pyautogui.click(x=775, y=519, button='right')
-pyautogui.press('tab')
+pyautogui.click(x=775, y=519, button='right')
+# pyautogui.press('tab')
