@@ -21,3 +21,8 @@ perguntas = [
 
 for indice,item in enumerate(perguntas):
     print(item['Pergunta']+'\n')
+    print('Opções:')
+    for i1,resposta in enumerate(perguntas[indice]['Opções']):
+        print(f'{i1}) {resposta}')
+        
+            
