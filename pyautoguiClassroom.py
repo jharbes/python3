@@ -4,10 +4,17 @@ import pyautogui
 import time # para usar o time.sleep()
 
 pyautogui.click # clique com o mouse
+# pyautogui.click(x,y) - local da tela
+# pyautogui.click(x,y, button='right') - botao direito do mouse
+# pyautogui.click(x,y , clicks=2) - duplo clique do botao do mouse
+#  
 pyautogui.write # escrever um texto
+
 pyautogui.press # apertar uma tecla
+
 pyautogui.hotkey # apertar uma combinacao de teclas, ex: CTRL+D
-pyautogui.PAUSE # pause que funcionará entre TODOS os comandos do pyautogui
+
+pyautogui.PAUSE # pause que funcionará entre TODOS os comandos do pyautogui valor em segundos
 
 # Passo a passo
 
@@ -41,5 +48,5 @@ pyautogui.press('enter')
 # time.sleep(5)
 # print(pyautogui.position())
 time.sleep(3)
-pyautogui.click(x=700, y=371)
+pyautogui.click(x=700, y=371) # vamos tentar com sequencias de tab em vez de cliques com mouse
 pyautogui.write('meu_login')
