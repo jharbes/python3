@@ -7,8 +7,12 @@ pyautogui.click # clique com o mouse
 pyautogui.write # escrever um texto
 pyautogui.press # apertar uma tecla
 pyautogui.hotkey # apertar uma combinacao de teclas, ex: CTRL+D
+pyautogui.PAUSE # pause que funcionará entre TODOS os comandos do pyautogui
 
 # Passo a passo
+
+# setar Pausa:
+pyautogui.PAUSE = 1
 
 # Passo 1: Entrar no sistema da empresa (no link)
 
@@ -38,4 +42,4 @@ pyautogui.press('enter')
 # print(pyautogui.position())
 time.sleep(3)
 pyautogui.click(x=700, y=371)
-pyautogui.write('teste')
+pyautogui.write('meu_login')
