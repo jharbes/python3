@@ -1,3 +1,5 @@
-lista=[1,2,3]
+import time
+import pyautogui
 
-print(lista.index(1))
+time.sleep(5)
+print(pyautogui.position())
