@@ -25,3 +25,16 @@ lista_de_listas_de_inteiros = [
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
+
+
+def retornaPrimeiroDuplicado(lista):
+    setAuxiliar=set()
+    for item in lista:
+        if item in setAuxiliar:
+            return item
+        else:
+            setAuxiliar.add(item)
+    return -1
+
+for indice,lista in enumerate(lista_de_listas_de_inteiros):
+    print(f'Primeiro duplicado em lista_de_listas_de_inteiros[{indice}] = {retornaPrimeiroDuplicado(lista)}')
