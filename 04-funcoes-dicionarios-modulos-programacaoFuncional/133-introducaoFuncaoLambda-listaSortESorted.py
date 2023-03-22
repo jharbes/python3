@@ -21,6 +21,8 @@ print(lista)
 lista2=sorted(lista)
 print(lista2)
 
+print('----------------------------------')
+
 lista = [
     {'nome': 'Luiz', 'sobrenome': 'miranda'},
     {'nome': 'Maria', 'sobrenome': 'Oliveira'},
@@ -34,12 +36,15 @@ def ordena(item):
 
 lista.sort(key=ordena) # passamos a funcao ordena como key mostrando que seu retorno é o parametro que deve ser usado como meio de ordenacao
 print(lista)
+for item in lista:
+    print(item)
 # {'nome': 'Aline', 'sobrenome': 'Souza'}
 # {'nome': 'Daniel', 'sobrenome': 'Silva'}
 # {'nome': 'Eduardo', 'sobrenome': 'Moreira'}
 # {'nome': 'Luiz', 'sobrenome': 'miranda'}
 # {'nome': 'Maria', 'sobrenome': 'Oliveira'}
 
+print('-------------------------------')
 
 lista2=[
     {'nome': 'Luiz', 'sobrenome': 'miranda'},
@@ -55,8 +60,12 @@ def exibir(lista2):
     print()
 
 
-l1 = sorted(lista2, key=lambda item: item['nome'])
-l2 = sorted(lista2, key=lambda item: item['sobrenome'])
+# lambda seria como def, item seria como o(s) parametro(s) e item['nome'] seria como o retorno da funcao
+l1 = sorted(lista2, key=lambda item: item['nome']) # aqui cria uma nova lista l1 (copia rasa)
+
+# ou
+
+lista2.sort(key=lambda item: item['sobrenome']) # aqui altera a lista original lista2
 
 exibir(l1)
-exibir(l2)
+exibir(lista2)
