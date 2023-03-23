@@ -2,29 +2,38 @@ def executa(funcao, *args):
     return funcao(*args)
 
 
-# def soma(x, y):
-#     return x + y
+def soma(x, y):
+    return x + y
 
 
-# def cria_multiplicador(multiplicador):
-#     def multiplica(numero):
-#         return numero * multiplicador
-#     return multiplica
+def cria_multiplicador(multiplicador):
+    def multiplica(numero):
+        return numero * multiplicador
+    return multiplica
 
+duplica = cria_multiplicador(2)
 
-# duplica = cria_multiplicador(2)
 duplica = executa(
     lambda m: lambda n: n * m,
     2
 )
 print(duplica(2))
 
+print('---------------------------------------')
+
+# estamos aqui recriando a funcao soma definida abaixo como lambda, observe lambda=def, nao existe nome(soma), os parametros ficam sem parenteses, : = return e por fim a funcao em si.
+# observe que as tres funcoes abaixo sao iguais
 print(
     executa(
         lambda x, y: x + y,
         2, 3
     ),
+    executa(soma,2,3),
+    soma(2,3)
 )
+
+print('---------------------------------------')
+
 
 print(
     executa(
@@ -32,3 +41,5 @@ print(
         1, 2, 3, 4, 5, 6, 7
     )
 )
+
+print(lambda *args: sum(args),5,6,6,7,5)
