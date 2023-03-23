@@ -1,12 +1,9 @@
 # Empacotamento e desempacotamento de dicionários
 a, b = 1, 2
 a, b = b, a
-# print(a, b)
+print(a, b) # 2 1
 
-
-# (a1, a2), (b1, b2) = pessoa.items()
-# print(a1, a2)
-# print(b1, b2)
+print('----------------------------')
 
 # for chave, valor in pessoa.items():
 #     print(chave, valor)
@@ -15,6 +12,24 @@ pessoa = {
     'nome': 'Aline',
     'sobrenome': 'Souza',
 }
+
+# desempacotamento das keys
+a,b=pessoa
+print(a,b) # nome sobrenome
+
+# desenpacotamento dos values
+a,b=pessoa.values()
+print(a,b) # Aline Souza
+
+# ambos os valores, keys e values
+a,b=pessoa.items()
+print(a,b) # ('nome', 'Aline') ('sobrenome', 'Souza')
+
+(a1, a2), (b1, b2) = pessoa.items()
+print(a1, a2) # nome Aline
+print(b1, b2) # sobrenome Souza
+
+print('----------------------------')
 
 dados_pessoa = {
     'idade': 16,
