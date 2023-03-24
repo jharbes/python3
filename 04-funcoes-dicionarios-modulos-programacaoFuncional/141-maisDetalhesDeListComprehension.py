@@ -61,3 +61,20 @@ print('-------------------------------')
 numbers=[1,2,3,4,5,6,7,8,9,10]
 newNumbers=[n for n in numbers if n>5]
 print(newNumbers) # [6, 7, 8, 9, 10]
+
+newNumbers2=[n+2 for n in numbers if n%2!=0]
+print(newNumbers2) # [3, 5, 7, 9, 11]
+
+anotherIf=[(n*2+3) if n!=6 else 60 for n in numbers]
+print(anotherIf) # [5, 7, 9, 11, 13, 60, 17, 19, 21, 23]
+
+anotherIf2=[(n*2+3) if n!=6 else 60 for n in numbers if ((n*2+3) if n!=6 else 60)%2==0]
+print(anotherIf2) # [60]
+
+anotherIf3=[
+    n
+    if n!=6 else 600
+    for n in numbers
+    if n%2==0
+]
+print(anotherIf3) # [2, 4, 600, 8, 10]
