@@ -122,6 +122,7 @@ string='Linux Kernel'
 newString=[letter for letter in string]
 print(newString) # ['L', 'i', 'n', 'u', 'x', ' ', 'K', 'e', 'r', 'n', 'e', 'l']
 
+
 newStringUnited=''.join(newString)
 print(newStringUnited) # Linux Kernel
 
@@ -131,3 +132,19 @@ newString2=[
     for i in range(0,len(string),numLetters)
 ]
 print(newString2) # ['Linux', ' Kern', 'el']
+
+
+numLetters=2
+newString2='.'.join([
+    string[i:i+numLetters]
+    for i in range(0,len(string),numLetters)
+])
+print(newString2) # Li.nu.x .Ke.rn.el 
+
+
+### DESAFIO: Colocar a ultima letra de cada nome maiuscula e todas as outras minusculas com list comprehension
+
+nomes=['luiz','maria','helena','joana','felipe']
+
+novosNomes=[nome[0:-1].lower()+nome[-1].upper() for nome in nomes]
+print(novosNomes) # ['luiZ', 'mariA', 'helenA', 'joanA', 'felipE']
