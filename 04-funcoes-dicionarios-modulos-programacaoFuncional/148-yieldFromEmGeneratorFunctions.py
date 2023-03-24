@@ -1,4 +1,5 @@
-# Yield from
+# Yield from : como se fosse uma continuacao de outro generator para o generator em questao
+
 def gen1():
     print('COMECOU GEN1')
     yield 1
@@ -28,12 +29,15 @@ def gen2(gen=None):
 g1 = gen2(gen1())
 g2 = gen2(gen3())
 g3 = gen2()
+
 for numero in g1:
     print(numero)
 print()
+
 for numero in g2:
     print(numero)
 print()
+
 for numero in g3:
     print(numero)
 print()
