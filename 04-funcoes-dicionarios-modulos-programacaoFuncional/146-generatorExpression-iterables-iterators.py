@@ -9,6 +9,7 @@ generator = (n for n in range(1000000))
 print(sys.getsizeof(lista))
 print(sys.getsizeof(generator))
 
+print(lista)
 print(generator)
 
 # for n in generator:
