@@ -111,3 +111,23 @@ linhasColunas=[
 ]
 
 print(linhasColunas) # [(1, 1), (1000, 2000), (1, 3), (1, 4), (1, 5), (3, 1), (3000, 2000), (3, 3), (3, 4), (3, 5), (4, 1), (4000, 2000), (4, 3), (4, 4), (4, 5), (5, 1), (5000, 2000), (5, 3), (5, 4), (5, 5), (6, 1), (6000, 2000), (6, 3), (6, 4), (6, 5), (7, 1), (7000, 2000), (7, 3), (7, 4), (7, 5), (8, 1), (8000, 2000), (8, 3), (8, 4), (8, 5), (9, 1), (9000, 2000), (9, 3), (9, 4), (9, 5), (10, 1), (10000, 2000), (10, 3), (10, 4), (10, 5)]
+
+
+print('-------------------------------')
+
+
+## LIST COMPREHENSION COM STRINGS
+
+string='Linux Kernel'
+newString=[letter for letter in string]
+print(newString) # ['L', 'i', 'n', 'u', 'x', ' ', 'K', 'e', 'r', 'n', 'e', 'l']
+
+newStringUnited=''.join(newString)
+print(newStringUnited) # Linux Kernel
+
+numLetters=5
+newString2=[
+    string[i:i+numLetters]
+    for i in range(0,len(string),numLetters)
+]
+print(newString2) # ['Linux', ' Kern', 'el']
