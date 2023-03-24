@@ -35,3 +35,29 @@ novosNumeros4=[]
 for numero in numeros4:
     novosNumeros4.append(numero)
 print(novosNumeros4) # [1, 2, 3, 4, 5]
+
+print('-------------------------------')
+
+
+# Agora usaremos a list comprehension para fazer uma copia da lista com alteracoes dos valores (semelhante a map)
+
+numeros5=[1,2,3,4,5]
+novosNumeros5=[n/2 for n in numeros5] 
+multiplicacao=[n*2 for n in numeros5]
+quadrado=[n**2 for n in numeros5]
+squareRt=[n ** (1/2) for n in numeros5]
+
+print(novosNumeros5) # [0.5, 1.0, 1.5, 2.0, 2.5]
+print(multiplicacao) # [2, 4, 6, 8, 10]
+print(quadrado) # [1, 4, 9, 16, 25]
+print(squareRt) # [1.0, 1.4142135623730951, 1.7320508075688772, 2.0, 2.23606797749979]
+
+
+print('-------------------------------')
+
+
+## LIST COMPREHENSION COMO FILTER, para filtragem o IF vem depois do for.
+
+numbers=[1,2,3,4,5,6,7,8,9,10]
+newNumbers=[n for n in numbers if n>5]
+print(newNumbers) # [6, 7, 8, 9, 10]
