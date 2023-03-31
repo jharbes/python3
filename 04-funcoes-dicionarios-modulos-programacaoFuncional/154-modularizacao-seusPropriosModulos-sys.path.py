@@ -8,6 +8,14 @@
 # O python conhece todos os módulos e pacotes presentes
 # nos caminhos de sys.path
 
-import aula97_m
+import sys
+print(sys.path)
+
+sys.path.append('C:\\Users\\jharbes\\Documents') # adiciona a pasta nas listas de path do sistema, agora seria possivel importar modulos de dentro dessa pasta
+
+import moduloTeste
+import moduloPython # modulo que esta no diretorio adicionado com o append de forma manual
 
 print('Este módulo se chama', __name__)
+
+print(*sys.path,sep='\n') # imprimindo todos os caminhos disponiveis para importacao de modulos
