@@ -11,6 +11,10 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
+
+import copy
+
+novos_produtos=copy.deepcopy(produtos) # nesse caso é opcional
 novos_produtos=[{**produto, 'preco': produto['preco']*1.1} for produto in produtos]
 
 print(novos_produtos) # [{'nome': 'Produto 5', 'preco': 11.0}, {'nome': 'Produto 1', 'preco': 24.552000000000003}, {'nome': 'Produto 3', 'preco': 11.121}, {'nome': 'Produto 2', 'preco': 116.45700000000001}, {'nome': 'Produto 4', 'preco': 76.89000000000001}]
@@ -31,9 +35,8 @@ print('\n----------------------------------------\n')
 # Ordene os produtos por nome decrescente (do maior para menor)
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 
-import copy
 
-produtos_ordenados_por_nome=copy.deepcopy(sorted(produtos,key=lambda produto: produto['nome'], reverse=True))
+produtos_ordenados_por_nome=copy.deepcopy(sorted(produtos,key=lambda produto: produto['nome'], reverse=True)) # nesse caso o deep copy é obrigatorio
 
 print(produtos_ordenados_por_nome)
 
@@ -51,6 +54,6 @@ print('\n----------------------------------------\n')
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
 
-produtos_ordenados_por_preco=copy.deepcopy(sorted(produtos,key=lambda produto: produto['preco']))
+produtos_ordenados_por_preco=copy.deepcopy(sorted(produtos,key=lambda produto: produto['preco'])) # nesse caso deepcopy obrigatorio tambem
 
 print(produtos_ordenados_por_preco)
