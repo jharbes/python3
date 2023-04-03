@@ -1,8 +1,10 @@
 # Funções decoradoras e decoradores
-# Decorar = Adicionar / Remover/ Restringir / Alterar
+
+# Decorar = Adicionar / Remover/ Restringir / Alterar uma funcao
+
 # Funções decoradoras são funções que decoram outras funções
-# Decoradores são usados para fazer o Python
-# usar as funções decoradoras em outras funções.
+
+# Decoradores são usados para fazer o Python usar as funções decoradoras em outras funções.
 
 def criar_funcao(func):
     def interna(*args, **kwargs):
