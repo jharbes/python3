@@ -36,7 +36,7 @@ print('\n----------------------------------------\n')
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 
 
-produtos_ordenados_por_nome=copy.deepcopy(sorted(produtos,key=lambda produto: produto['nome'], reverse=True)) # nesse caso o deep copy é obrigatorio
+produtos_ordenados_por_nome=sorted(copy.deepcopy(produtos),key=lambda produto: produto['nome'], reverse=True) # nesse caso o deep copy é obrigatorio
 
 print(produtos_ordenados_por_nome)
 
@@ -54,6 +54,6 @@ print('\n----------------------------------------\n')
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
 
-produtos_ordenados_por_preco=copy.deepcopy(sorted(produtos,key=lambda produto: produto['preco'])) # nesse caso deepcopy obrigatorio tambem
+produtos_ordenados_por_preco=sorted(copy.deepcopy(produtos),key=lambda produto: produto['preco']) # nesse caso deepcopy obrigatorio tambem
 
 print(produtos_ordenados_por_preco)
