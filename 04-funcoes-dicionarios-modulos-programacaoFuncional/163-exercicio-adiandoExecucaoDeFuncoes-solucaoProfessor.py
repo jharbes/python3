@@ -7,6 +7,7 @@ def multiplica(x, y):
     return x * y
 
 
+# adiamos a execucao da funcao retornando nessa funcao uma outra funcao (nesse caso a interna), assim ficarao salvos os valores passados anteriormente e a execucao da funcao repassada
 def criar_funcao(funcao, x):
     def interna(y):
         return funcao(x, y)
