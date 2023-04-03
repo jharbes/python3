@@ -21,14 +21,14 @@ produtos = [
     {'nome': 'p2', 'preco': 10, },
     {'nome': 'p3', 'preco': 30, },
 ]
-print(produtos)
+print(produtos) # [{'nome': 'p1', 'preco': 20}, {'nome': 'p2', 'preco': 10}, {'nome': 'p3', 'preco': 30}]
 
 print('----------------------------------')
 
 produtos2=[
     {**produto} for produto in produtos
 ]
-print(produtos2)
+print(produtos2) # [{'nome': 'p1', 'preco': 20}, {'nome': 'p2', 'preco': 10}, {'nome': 'p3', 'preco': 30}]
 
 print('----------------------------------')
 
@@ -41,7 +41,7 @@ novos_produtos = [
     for produto in produtos
 ]
 
-print(novos_produtos)
+print(novos_produtos) # [{'nome': 'p1', 'preco': 20}, {'nome': 'p2', 'preco': 10}, {'nome': 'p3', 'preco': 31.5}]
 
 print('----------------------------------')
 
