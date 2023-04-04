@@ -1,4 +1,5 @@
 # Decoradores com parâmetros
+
 def fabrica_de_decoradores(a=None, b=None, c=None):
     def fabrica_de_funcoes(func):
         print('Decoradora 1')
