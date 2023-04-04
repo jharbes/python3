@@ -31,4 +31,4 @@ def funcaoZipper(lista1,lista2):
 
     return listaZipper
 
-funcaoZipper(listaCidades,listaEstados)
+print(funcaoZipper(listaCidades,listaEstados))
