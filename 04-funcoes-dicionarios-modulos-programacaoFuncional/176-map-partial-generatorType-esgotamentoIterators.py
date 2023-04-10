@@ -28,12 +28,15 @@ aumentar_dez_porcento = partial(
     porcentagem=1.1
 )
 
-# novos_produtos = [
-#     {**p,
-#         'preco': aumentar_dez_porcento(p['preco'])}
-#     for p in produtos
-# ]
+novos_produtos = [
+    {**p,
+        'preco': aumentar_dez_porcento(p['preco'])}
+    for p in produtos
+]
 
+print_iter(novos_produtos)
+
+print('--------------------------------------')
 
 def muda_preco_de_produtos(produto):
     return {
@@ -43,7 +46,7 @@ def muda_preco_de_produtos(produto):
         )
     }
 
-
+# map recebe uma funcao como argumento e depois os parametros a serem utilizados, é comum envolver o map em lista pois o map retorna um map object e nao uma lista ou dict para que nao seja um iteravel esgotado
 novos_produtos = list(map(
     muda_preco_de_produtos,
     produtos
@@ -52,7 +55,11 @@ novos_produtos = list(map(
 
 print_iter(produtos)
 print_iter(novos_produtos)
+print(novos_produtos)
 
+print('--------------------------------------')
+
+# usando map novamente
 print(
     list(map(
         lambda x: x * 3,
