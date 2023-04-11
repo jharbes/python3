@@ -7,6 +7,7 @@
 # - Um caso base que para a recursão
 # - fatorial - n! = 5! = 5 * 4 * 3 * 2 * 1 = 120
 # https://brasilescola.uol.com.br/matematica/fatorial.htm
+
 def recursiva(inicio=0, fim=4):
 
     print(inicio, fim)
@@ -22,3 +23,13 @@ def recursiva(inicio=0, fim=4):
 
 
 print(recursiva())
+
+print('-------------------------')
+
+def fatorial(n):
+    return n*fatorial(n-1) if n>1 else 1
+    
+print(fatorial(5))
+print(fatorial(3))
+print(fatorial(7))
+print(fatorial(-2))
