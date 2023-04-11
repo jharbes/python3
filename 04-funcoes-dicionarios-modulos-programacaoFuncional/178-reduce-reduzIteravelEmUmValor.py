@@ -17,19 +17,23 @@ produtos = [
 #     return acumulador + produto['preco']
 
 
+# recomenda-se passar o valor inicial (terceiro parametro), pois na ausencia dele o primeiro item do iteravel sera o valor inicial, o que pode ocasionar problemas indesejaveis
 total = reduce(
-    lambda ac, p: ac + p['preco'],
-    produtos,
-    0
+    lambda acum, prod: acum + prod['preco'], # funcao a ser desempenhada
+    produtos, # iteravel
+    0 # valor inicial
 )
 
-print('Total é', total)
+print('Total é', total) # Total é 44
 
+print('-------------------------')
 
-# total = 0
-# for p in produtos:
-#     total += p['preco']
+total = 0
+for p in produtos:
+    total += p['preco']
 
-# print(total)
+print(total) # 44
 
-# print(sum([p['preco'] for p in produtos]))
+print('-------------------------')
+
+print(sum([p['preco'] for p in produtos])) # 44
