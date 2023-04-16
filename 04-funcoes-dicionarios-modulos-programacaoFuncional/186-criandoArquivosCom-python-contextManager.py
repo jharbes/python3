@@ -34,11 +34,13 @@
 # json.load
 caminho_arquivo = '.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\186-aula-criandoArquivo.txt'
 
+# abrindo o arquivo (e criando ao mesmo tempo caso nao exista)
 arquivo = open(caminho_arquivo, 'w')
 
-arquivo.close()
+arquivo.close() # fechando o arquivo, importantissimo
 
 
+## Context manager: (ja fecha automaticamente no fim do laço)
 with open(caminho_arquivo, 'w') as arquivo:
     print('Olá mundo')
     print('Arquivo vai ser fechado')
