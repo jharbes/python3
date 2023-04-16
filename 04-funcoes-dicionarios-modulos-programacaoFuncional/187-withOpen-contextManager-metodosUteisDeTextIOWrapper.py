@@ -14,7 +14,8 @@ with open(caminho_arquivo, 'w') as arquivo:
     print('Olá mundo')
     print('Arquivo vai ser fechado')
 
-with open(caminho_arquivo, 'w+') as arquivo:
+# w+ utiliza a funcao de escrita mais leitura
+with open(caminho_arquivo, 'w+') as arquivo: 
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n')
     arquivo.writelines(
@@ -23,9 +24,9 @@ with open(caminho_arquivo, 'w+') as arquivo:
     arquivo.seek(0, 0)
     print(arquivo.read())
     print('Lendo')
-    arquivo.seek(0, 0)
+    arquivo.seek(0, 0) # move o cursor para o ponto do arquivo desejado
     print(arquivo.readline(), end='')
-    print(arquivo.readline().strip())
+    print(arquivo.readline().strip()) 
     print(arquivo.readline().strip())
 
     print('READLINES')
