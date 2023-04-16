@@ -1,3 +1,8 @@
+"""
+Se alterarmos para o ambiente virtual a instalacao dos pacotes sera feita direntamente no ambiente virtual e nao no ambiente geral
+"""
+
+
 # pip - instalando pacotes e bibliotecas
 # Instalar última versão:
 # pip install nome_pacote
