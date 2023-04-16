@@ -7,6 +7,8 @@
 caminho_arquivo = '.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\188-aula-criandoArquivo.txt'
 
 with open(caminho_arquivo, 'w+') as arquivo:
+    print(type(arquivo))
+    print()
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n')
     arquivo.writelines(
@@ -31,6 +33,9 @@ print('#' * 10)
 with open(caminho_arquivo, 'r') as arquivo:
     print(arquivo.read())
 
+print('\n-------------------------\n')
+
+# sem o utf8 os caracteres especiais ficarao com erro
 with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
     arquivo.write('Atenção\n')
     arquivo.write('Linha 1\n')
@@ -38,3 +43,11 @@ with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
     arquivo.writelines(
         ('Linha 3\n', 'Linha 4\n')
     )
+
+with open(caminho_arquivo, 'a', encoding='utf8') as arquivo:
+    arquivo.write('Continuação\n')
+    arquivo.write('Linha5')
+
+# sem o utf8 os caracteres especiais ficarao com erro
+with open(caminho_arquivo, 'r', encoding='utf8') as arquivo:
+    print(arquivo.read())
