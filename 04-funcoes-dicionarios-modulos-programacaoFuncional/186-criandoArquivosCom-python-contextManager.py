@@ -16,9 +16,9 @@
 # Usamos a função open para abrir
 # um arquivo em Python (ele pode ou não existir)
 # Modos:
-# r (leitura), w (escrita), x (para criação)
+# r (leitura), w (escrita), x (para criação, no entanto dificilmente é usado)
 # a (escreve ao final), b (binário)
-# t (modo texto), + (leitura e escrita)
+# t (modo texto), + (leitura e escrita, r+ ou w+)
 # Context manager - with (abre e fecha)
 # Métodos úteis
 # write, read (escrever e ler)
@@ -32,11 +32,13 @@
 # Vamos falar mais sobre o módulo json, mas:
 # json.dump = Gera um arquivo json
 # json.load
-caminho_arquivo = '186-aula-criandoArquivo.txt'
+caminho_arquivo = '.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\186-aula-criandoArquivo.txt'
 
-# arquivo = open(caminho_arquivo, 'w')
-# #
-# arquivo.close()
+arquivo = open(caminho_arquivo, 'w')
+
+arquivo.close()
+
+
 with open(caminho_arquivo, 'w') as arquivo:
     print('Olá mundo')
     print('Arquivo vai ser fechado')
