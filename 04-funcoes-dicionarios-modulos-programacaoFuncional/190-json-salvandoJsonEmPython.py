@@ -13,7 +13,12 @@ pessoa = {
     'nada': None,
 }
 
-with open('aula117.json', 'w', encoding='utf8') as arquivo:
+# o caminho esta sendo usado a partir do diretorio raiz do curso python3, pois assim venho abrindo pelo github desktop
+caminhoArquivoJson='.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\190-json-arquivoAuxiliar.json'
+
+# ensure_ascii=False mostra os caracteres especiais no arquivo em vez de codificação
+# indent=2 formata o arquivo de maneira a ficar mais facil seu entendimento (em varias linhas em vez de tudo em uma)
+with open(caminhoArquivoJson, 'w', encoding='utf8') as arquivo:
     json.dump(
         pessoa,
         arquivo,
@@ -21,8 +26,8 @@ with open('aula117.json', 'w', encoding='utf8') as arquivo:
         indent=2,
     )
 
-with open('aula117.json', 'r', encoding='utf8') as arquivo:
-    pessoa = json.load(arquivo)
-    # print(pessoa)
-    # print(type(pessoa))
-    print(pessoa['nome'])
+with open(caminhoArquivoJson, 'r', encoding='utf8') as arquivo:
+    pessoa1 = json.load(arquivo)
+    print(pessoa1)
+    print(type(pessoa1))
+    print(pessoa1['nome']) 
