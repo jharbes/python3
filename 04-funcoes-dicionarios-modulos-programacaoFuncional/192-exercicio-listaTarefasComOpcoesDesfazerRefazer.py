@@ -12,3 +12,26 @@
 
 # refazer = todo ['fazer café']
 # refazer = todo ['fazer café', 'caminhar']
+
+
+todoList=[]
+refazerList=[]
+
+
+while True:
+    print('Comandos: listar, desfazer, refazer, fim')
+    tarefa=input('Digite uma tarefa ou comando: ')
+    print()
+    if tarefa=='listar':
+        print('TAREFAS:')
+        for task in todoList:
+            print(task)
+        print()
+    elif tarefa=='desfazer':
+        refazerList.append(todoList.pop())
+    elif tarefa=='refazer':
+        todoList.append(refazerList.pop())
+    elif tarefa=='fim':
+        break
+    else:
+        todoList.append(tarefa)
