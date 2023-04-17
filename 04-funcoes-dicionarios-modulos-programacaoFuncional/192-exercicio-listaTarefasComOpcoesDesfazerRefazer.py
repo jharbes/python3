@@ -24,14 +24,27 @@ while True:
     print()
     if tarefa=='listar':
         print('TAREFAS:')
-        for task in todoList:
-            print(task)
+        if len(todoList)<1:
+            print('Não há tarefas para serem listadas!\n')
+        else:
+            for task in todoList:
+                print(task)
         print()
     elif tarefa=='desfazer':
-        refazerList.append(todoList.pop())
+        if len(todoList)<1:
+            print('Não há tarefa para desfazer!\n')
+        else:
+            refazerList.append(todoList.pop())
     elif tarefa=='refazer':
-        todoList.append(refazerList.pop())
+        if len(refazerList)<1:
+            print('Não há tarefa para refazer!\n')
+        else:
+            todoList.append(refazerList.pop())
     elif tarefa=='fim':
         break
     else:
         todoList.append(tarefa)
+        print('TAREFAS:')
+        for task in todoList:
+                print(task)
+        print()
