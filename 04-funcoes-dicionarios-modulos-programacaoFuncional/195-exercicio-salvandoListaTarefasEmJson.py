@@ -16,22 +16,25 @@ caminhoArquivoJson='.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\195-
 
 try:
     with open(caminhoArquivoJson, 'r', encoding='utf8') as arquivo:
-        todoList = json.load(arquivo)
+        listas = json.load(arquivo)
+
 except:
     print('Arquivo JSON não localizado, lista inicial de tarefas será vazia.\n')
-    todoList=[]
+    listas={
+        'todoList':[],
+        'refazerList':[]
+    }
 
 
 def printarTarefas():
     print('TAREFAS:')
-    if len(todoList)<1:
+    if len(listas['todoList'])<1:
         print('Não há tarefas para serem listadas!')
     else:
-        for task in todoList:
+        for task in listas['todoList']:
             print(task)
     print()
 
-refazerList=[]
 
 
 while True:
@@ -41,19 +44,29 @@ while True:
     if tarefa=='listar':
         printarTarefas()
     elif tarefa=='desfazer':
-        if len(todoList)<1:
+        if len(listas['todoList'])<1:
             print('Não há tarefa para desfazer!\n')
         else:
-            refazerList.append(todoList.pop())
+            listas['refazerList'].append(listas['todoList'].pop())
             printarTarefas()
     elif tarefa=='refazer':
-        if len(refazerList)<1:
+        if len(listas['refazerList'])<1:
             print('Não há tarefa para refazer!\n')
         else:
-            todoList.append(refazerList.pop())
+            listas['todoList'].append(listas['refazerList'].pop())
             printarTarefas()
     elif tarefa=='fim':
         break
     else:
-        todoList.append(tarefa)
+        listas['todoList'].append(tarefa)
         printarTarefas()
+
+
+with open(caminhoArquivoJson, 'w', encoding='utf8') as arquivo:
+    json.dump(
+        listas,
+        arquivo,
+        ensure_ascii=False,
+        indent=2,
+    )
+    
