@@ -25,7 +25,7 @@ while True:
     if tarefa=='listar':
         print('TAREFAS:')
         if len(todoList)<1:
-            print('Não há tarefas para serem listadas!\n')
+            print('Não há tarefas para serem listadas!')
         else:
             for task in todoList:
                 print(task)
