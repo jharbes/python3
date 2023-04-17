@@ -10,6 +10,18 @@
 # refazer = todo ['fazer café']
 # refazer = todo ['fazer café', 'caminhar']
 
+import json
+
+caminhoArquivoJson='.\\04-funcoes-dicionarios-modulos-programacaoFuncional\\195-json-arquivoAuxiliar.json'
+
+try:
+    with open(caminhoArquivoJson, 'r', encoding='utf8') as arquivo:
+        todoList = json.load(arquivo)
+except:
+    print('Arquivo JSON não localizado, lista inicial de tarefas será vazia.\n')
+    todoList=[]
+
+
 def printarTarefas():
     print('TAREFAS:')
     if len(todoList)<1:
@@ -19,7 +31,6 @@ def printarTarefas():
             print(task)
     print()
 
-todoList=[]
 refazerList=[]
 
 
