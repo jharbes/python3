@@ -11,6 +11,9 @@
 # print(string.upper())
 # print(isinstance(string, str))
 
+# o primeiro parametro sempre sera o self
+
+
 class Pessoa:
     def __init__(self, nome, sobrenome):
         self.nome = nome
