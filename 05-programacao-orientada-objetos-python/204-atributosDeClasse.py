@@ -1,4 +1,5 @@
 # Atributos de classe
+
 class Pessoa:
     ano_atual = 2022
 
@@ -13,8 +14,14 @@ class Pessoa:
 p1 = Pessoa('João', 35)
 p2 = Pessoa('Helena', 12)
 
-print(Pessoa.ano_atual)
+print(Pessoa.ano_atual) # 2022
+print(p1.ano_atual) # 2022
+
+p1.ano_atual=0
 # Pessoa.ano_atual = 1
 
-print(p1.get_ano_nascimento())
-print(p2.get_ano_nascimento())
+print(Pessoa.ano_atual) # 2022
+print(p1.ano_atual) # 0
+
+print(p1.get_ano_nascimento()) # 1987
+print(p2.get_ano_nascimento()) # 2010
