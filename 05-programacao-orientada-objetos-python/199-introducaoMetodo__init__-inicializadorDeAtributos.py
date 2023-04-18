@@ -6,9 +6,11 @@
 # internos para realizar várias ações.
 # Por convenção, usamos PascalCase para nomes de
 # classes.
+
 # string = 'Luiz'  # str
 # print(string.upper())
 # print(isinstance(string, str))
+
 class Pessoa:
     def __init__(self, nome, sobrenome):
         self.nome = nome
@@ -23,8 +25,8 @@ p2 = Pessoa('Maria', 'Joana')
 # p2.nome = 'Maria'
 # p2.sobrenome = 'Joana'
 
-print(p1.nome)
-print(p1.sobrenome)
+print(p1.nome) # Luiz
+print(p1.sobrenome) # Otávio
 
-print(p2.nome)
-print(p2.sobrenome)
+print(p2.nome) # Maria
+print(p2.sobrenome) # Joana
