@@ -4,18 +4,11 @@ caminhoArquivoJson='.\\05-programacao-orientada-objetos-python\\206-json-arquivo
 
 try:
     with open(caminhoArquivoJson, 'r', encoding='utf8') as arquivo:
-        cadastro = json.load(arquivo)
+        cadastroLista = json.load(arquivo)
 
 except:
     print('Arquivo JSON não localizado, lista inicial de tarefas será vazia.\n')
-    listas={
-        'todoList':[],
-        'refazerList':[]
-    }
-
-cadastro={}
-
-
+    cadastroLista=[]
 
 
 class Pessoa:
@@ -24,3 +17,15 @@ class Pessoa:
         self.idade=idade
         self.email=email
         self.profissao=profissao
+
+
+print(cadastroLista)
+print(type(cadastroLista[0]))
+
+listaPessoas=[]
+for pessoa in cadastroLista:
+    print(type(pessoa))
+    pessoa=pessoa.replace('{','').replace('}','').replace("'",'').strip()
+    print(pessoa)
+
+print(listaPessoas)
