@@ -1,6 +1,8 @@
 # Métodos em instâncias de classes Python
 # Hard coded - É algo que foi escrito diretamente no código
+
 class Carro:
+    # inicializando os atributos
     def __init__(self, nome):
         self.nome = nome
 
@@ -9,12 +11,13 @@ class Carro:
 
 
 string = 'Luiz'
-print(string.upper())
+# metodo da classe string
+print(string.upper()) # LUIZ
 
 fusca = Carro('Fusca')
-print(fusca.nome)
-fusca.acelerar()
+print(fusca.nome) # Fusca
+fusca.acelerar() # Fusca está acelerando...
 
 celta = Carro(nome='Celta')
-print(celta.nome)
-celta.acelerar()
+print(celta.nome) # Celta
+celta.acelerar() # Celta está acelerando...
