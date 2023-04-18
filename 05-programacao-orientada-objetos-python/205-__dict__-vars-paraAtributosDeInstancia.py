@@ -12,14 +12,28 @@ class Pessoa:
 
 dados = {'nome': 'João', 'idade': 35}
 p1 = Pessoa(**dados)
+
 # p1.nome = 'EITA'
-# print(p1.idade)
-# p1.__dict__['outra'] = 'coisa'
+print(p1.idade) # 35
+
+p1.__dict__['outra'] = 'coisa'
 # p1.__dict__['nome'] = 'EITA'
-# del p1.__dict__['nome']
-# print(p1.__dict__)
-# print(vars(p1))
+
+print(p1.__dict__) # {'nome': 'João', 'idade': 35, 'outra': 'coisa'}
+
+# apaga o atributo nome do objeto
+del p1.__dict__['outra']
+
+# imprime um dicionario que retem os atributos e valores do objeto
+print(p1.__dict__) # {'nome': 'João', 'idade': 35}
+
+# imprime um dicionario que retem os atributos e valores do objeto
+print(vars(p1)) # {'nome': 'João', 'idade': 35}
+
 # print(p1.outra)
 # print(p1.nome)
-print(vars(p1))
-print(p1.nome)
+
+# imprime um dicionario que retem os atributos e valores do objeto
+print(vars(p1)) # {'nome': 'João', 'idade': 35}
+
+print(p1.nome) # João
