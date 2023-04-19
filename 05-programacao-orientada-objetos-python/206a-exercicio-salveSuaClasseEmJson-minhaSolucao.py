@@ -7,7 +7,8 @@
 
 import json
 
-cadastroLista=[]
+arquivoJson={}
+arquivoJson['pessoas']=[]
 
 caminhoArquivoJson='.\\05-programacao-orientada-objetos-python\\206-json-arquivoAuxiliar.json'
 
@@ -20,18 +21,18 @@ class Pessoa:
 
 
 p1=Pessoa('Jorge Nami Harbes',39,'jharbes@hotmail.com','Software Developer')
-cadastroLista.append(f'{p1.__dict__}')
+arquivoJson['pessoas'].append(f'{p1.__dict__}')
 p2=Pessoa('Carolina Ferreira Alcântara',28,'carolalcantara94@gmail.com','Professora de Educação Física')
-cadastroLista.append(f'{p2.__dict__}')
+arquivoJson['pessoas'].append(f'{p2.__dict__}')
 p3=Pessoa('Maria Ferreira Barreto',89,'maria@barreto.com','Aposentada')
-cadastroLista.append(f'{p3.__dict__}')
+arquivoJson['pessoas'].append(f'{p3.__dict__}')
 
 
 
 
 with open(caminhoArquivoJson, 'w', encoding='utf8') as arquivo:
     json.dump(
-        cadastroLista,
+        arquivoJson,
         arquivo,
         ensure_ascii=False,
         indent=2,
