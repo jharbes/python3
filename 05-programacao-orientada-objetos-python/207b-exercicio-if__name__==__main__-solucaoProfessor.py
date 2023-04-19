@@ -2,6 +2,8 @@ import json
 
 CAMINHO_ARQUIVO = '.\\05-programacao-orientada-objetos-python\\207-json-arquivoAuxiliar.json'
 
+
+
 def fazer_dump():
     with open(CAMINHO_ARQUIVO, 'w') as arquivo:
         print('FAZENDO DUMP')
@@ -23,3 +25,5 @@ with open(CAMINHO_ARQUIVO, 'r') as arquivo:
     print(p1.nome, p1.idade)
     print(p2.nome, p2.idade)
     print(p3.nome, p3.idade)
+
+    bd = [vars(p1), p2.__dict__, vars(p3)]
