@@ -21,14 +21,21 @@ class Pessoa:
 
 listaPessoas=[]
 
+# podemos colocar atributo por atributo mas tambem expandir o dicionario que esta na lista pessoas
 for pessoa in arquivoJson['pessoas']:
-    listaPessoas.append(Pessoa(pessoa['nome'],pessoa['idade'],pessoa['email'],pessoa['profissao']))
+    # listaPessoas.append(Pessoa(pessoa['nome'],pessoa['idade'],pessoa['email'],pessoa['profissao']))
+    listaPessoas.append(Pessoa(**pessoa))
+    
 
 
 for pessoa in listaPessoas:
     print(pessoa.__dict__)
     print()
 
+
+
+
+# abaixo temos a retirada dos dados no formato string onde eu havia feito errado, foi tao trabalhoso que nao tive coragem de apagar rs
 
 # listaPessoas=[]
 # for pessoa in arquivoJson['pessoas']:
