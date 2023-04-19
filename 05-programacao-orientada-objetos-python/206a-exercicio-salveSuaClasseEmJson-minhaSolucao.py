@@ -21,11 +21,11 @@ class Pessoa:
 
 
 p1=Pessoa('Jorge Nami Harbes',39,'jharbes@hotmail.com','Software Developer')
-arquivoJson['pessoas'].append(f'{p1.__dict__}')
+arquivoJson['pessoas'].append(p1.__dict__)
 p2=Pessoa('Carolina Ferreira Alcântara',28,'carolalcantara94@gmail.com','Professora de Educação Física')
-arquivoJson['pessoas'].append(f'{p2.__dict__}')
+arquivoJson['pessoas'].append(p2.__dict__)
 p3=Pessoa('Maria Ferreira Barreto',89,'maria@barreto.com','Aposentada')
-arquivoJson['pessoas'].append(f'{p3.__dict__}')
+arquivoJson['pessoas'].append(p3.__dict__)
 
 
 
