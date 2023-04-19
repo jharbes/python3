@@ -4,11 +4,11 @@ caminhoArquivoJson='.\\05-programacao-orientada-objetos-python\\206-json-arquivo
 
 try:
     with open(caminhoArquivoJson, 'r', encoding='utf8') as arquivo:
-        cadastroLista = json.load(arquivo)
+        arquivoJson = json.load(arquivo)
 
 except:
     print('Arquivo JSON não localizado, lista inicial de tarefas será vazia.\n')
-    cadastroLista=[]
+    arquivoJson={}
 
 
 class Pessoa:
@@ -19,13 +19,23 @@ class Pessoa:
         self.profissao=profissao
 
 
-print(cadastroLista)
-print(type(cadastroLista[0]))
 
 listaPessoas=[]
-for pessoa in cadastroLista:
-    print(type(pessoa))
-    pessoa=pessoa.replace('{','').replace('}','').replace("'",'').strip()
-    print(pessoa)
+for pessoa in arquivoJson['pessoas']:
+    pessoa=pessoa.replace('{','').replace('}','').replace("'",'').replace(': ',':').strip()
+    listaPessoa=pessoa.split(',')
+    for item in listaPessoa:
+        if 'nome' in item:
+            nome=item[item.find(':')+1:]
+        elif 'idade' in item:
+            idade=item[item.find(':')+1:]
+        elif 'email' in item:
+            email=item[item.find(':')+1:]
+        elif 'profissao' in item:
+            profissao=item[item.find(':')+1:]
+    listaPessoas.append(Pessoa(nome,idade,email,profissao))
 
-print(listaPessoas)
+
+for pessoa in listaPessoas:
+    print(pessoa.__dict__)
+
