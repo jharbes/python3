@@ -15,7 +15,7 @@ def funcao(*args, **kwargs):
 
 
 c1 = Classe()
-c1.funcao_que_esta_na_classe(1, 2, 3)
-funcao(1, 2, 3)
-Classe.funcao_que_esta_na_classe(nomeado=1)
-funcao(nomeado=1)
+c1.funcao_que_esta_na_classe(1, 2, 3) # Oi (1, 2, 3) {}
+funcao(1, 2, 3) # Oi (1, 2, 3) {}
+Classe.funcao_que_esta_na_classe(nomeado=1) # Oi () {'nomeado': 1}
+funcao(nomeado=1) # Oi () {'nomeado': 1}
