@@ -7,4 +7,5 @@
 # e digite:
 
 # -m executa como script
-# python -m venv venv
+python -m venv nome_do_ambiente_virtual
+
