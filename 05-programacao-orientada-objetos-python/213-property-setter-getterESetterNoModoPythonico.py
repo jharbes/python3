@@ -3,9 +3,11 @@
 # - p/ evitar quebrar código cliente
 # - p/ habilitar setter
 # - p/ executar ações ao obter um atributo
+
 # Atributos que começar com um ou dois underlines
 # não devem ser usados fora da classe.
 #  🐍🤓🤯🤯🤯🤯
+
 class Caneta:
     def __init__(self, cor):
         # private protected
@@ -17,6 +19,7 @@ class Caneta:
         print('ESTOU NO GETTER')
         return self._cor
 
+    # observe que no setter o nome do atributo é _cor e na classe é cor
     @cor.setter
     def cor(self, valor):
         print('ESTOU NO SETTER')
@@ -31,8 +34,8 @@ class Caneta:
         self._cor_tampa = valor
 
 
-caneta = Caneta('Azul')
-caneta.cor = 'Rosa'
-caneta.cor_tampa = 'Azul'
-print(caneta.cor)
-print(caneta.cor_tampa)
+caneta = Caneta('Azul') # ESTOU NO SETTER
+caneta.cor = 'Rosa' # ESTOU NO SETTER
+caneta.cor_tampa = 'Azul' # ESTOU NO SETTER
+print(caneta.cor) # Rosa
+print(caneta.cor_tampa) # Azul
