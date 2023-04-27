@@ -4,7 +4,7 @@
 #   (sem underline) = public
 #       pode ser usado em qualquer lugar
 # _ (um underline) = protected
-#       não DEVE ser usado fora da classe
+#       pode ser usado na classe
 #       ou suas subclasses.
 # __ (dois underlines) = private
 #       "name mangling" (desfiguração de nomes) em Python
@@ -37,5 +37,10 @@ class Foo:
 
 
 f = Foo()
-# print(f.public)
+
+print(f.public) # isso é público
+
 print(f.metodo_publico())
+# isso é private
+# __metodo_private
+# metodo_publico
