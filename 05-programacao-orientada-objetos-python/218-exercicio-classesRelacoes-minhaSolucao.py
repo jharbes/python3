@@ -38,6 +38,9 @@ class Carro:
     def fabricante(self,fabricante):
         self._fabricante=fabricante
 
+    def printCarro(self):
+        return f'Nome: {carro.nome}\nMotor: {carro.motor.tipo}\nFabricante: {carro.fabricante.nome}\n'
+
 
 class Motor:
     def __init__(self,tipo) -> None:
@@ -53,5 +56,4 @@ carro=Carro('Golf GTI')
 carro.motor=Motor('1.5 turbo')
 carro.fabricante=Fabricante('Volkswagen')
 
-print(vars(carro))
-print(carro.__dict__)
+print(carro.printCarro())
