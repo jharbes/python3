@@ -39,7 +39,7 @@ class Carro:
         self._fabricante=fabricante
 
     def printCarro(self):
-        return f'Nome: {carro.nome}\nMotor: {carro.motor.tipo}\nFabricante: {carro.fabricante.nome}\n'
+        return f'Nome: {self.nome}\nMotor: {self.motor.tipo}\nFabricante: {self.fabricante.nome}\n'
 
 
 class Motor:
@@ -51,9 +51,25 @@ class Fabricante:
     def __init__(self,nome) -> None:
         self.nome=nome
 
+motor1=Motor('1.5 Turbo')
+motor2=Motor('4.1 V8')
 
-carro=Carro('Golf GTI')
-carro.motor=Motor('1.5 turbo')
-carro.fabricante=Fabricante('Volkswagen')
 
-print(carro.printCarro())
+fabricante1=Fabricante('Volkswagen')
+fabricante2=Fabricante('Chevrolet')
+
+carro1=Carro('Golf GTI')
+carro1.motor=motor1
+carro1.fabricante=fabricante1
+
+carro2=Carro('Camaro')
+carro2.motor=motor2
+carro2.fabricante=fabricante2
+
+carro3=Carro('Corvette')
+carro3.motor=motor1
+carro3.fabricante=fabricante2
+
+print(carro1.printCarro())
+print(carro2.printCarro())
+print(carro3.printCarro())
