@@ -50,8 +50,8 @@ class Fabricante:
 
 
 carro=Carro('Golf GTI')
-carro.motor='1.5 turbo'
-carro.fabricante='Volkswagen'
+carro.motor=Motor('1.5 turbo')
+carro.fabricante=Fabricante('Volkswagen')
 
 print(vars(carro))
 print(carro.__dict__)
