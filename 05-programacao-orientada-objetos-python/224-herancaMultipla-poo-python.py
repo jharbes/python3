@@ -38,8 +38,8 @@ class A:
 class B(A):
     ...
 
-    # def quem_sou(self):
-    #     print('B')
+    def quem_sou(self):
+        print('B')
 
 
 class C(A):
@@ -48,7 +48,7 @@ class C(A):
     def quem_sou(self):
         print('C')
 
-
+# a ordem das classes faz diferenca quando for chamada o mro, no caso abaixo primeiramente sera chamada a classe B, depois a classe C, observe o mro
 class D(B, C):
     ...
 
@@ -57,6 +57,8 @@ class D(B, C):
 
 
 d = D()
-d.quem_sou()
-# print(D.__mro__)
-print(D.mro())
+d.quem_sou() # D
+
+print(D.__mro__) # (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+
+print(D.mro()) # [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
