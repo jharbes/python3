@@ -43,8 +43,8 @@ class C(B):
         super().__init__(*args, **kwargs)
 
     def metodo(self):
-        # super().metodo()  # B
-        # super(B, self).metodo()  # A
+        super().metodo()  # B
+        super(B, self).metodo()  # A
         # super(A, self).metodo()  # object
         A.metodo(self)
         B.metodo(self)
