@@ -43,22 +43,37 @@ class C(B):
         super().__init__(*args, **kwargs)
 
     def metodo(self):
-        # super().metodo()  # B
-        # super(B, self).metodo()  # A
-        # super(A, self).metodo()  # object
+        super().metodo()  # B # faça metodo em B
+        super(B, self).metodo()  # A # faça metodo em A
+        # super(A, self).metodo()  # object # erro
         A.metodo(self)
         B.metodo(self)
         print('C')
 
 
-# print(C.mro())
-# print(B.mro())
-# print(A.mro())
+# mro() -> retorna o method resolution order (Ordem de resolucao dos metodos em relacao à herança)
+print(C.mro())
+print(B.mro())
+print(A.mro())
+
 c = C('Atributo', 'Qualquer')
-# print(c.atributo)
-# print(c.outra_coisa)
+print(c.atributo) # Atributo
+print(c.outra_coisa) # Qualquer
+
 c.metodo()
-# print(c.atributo_a)
-# print(c.atributo_b)
-# print(c.atributo_c)
-# c.metodo()
+# B
+# A
+# A
+# B
+# C
+
+print(c.atributo_a) # valor a
+print(c.atributo_b) # valor b
+print(c.atributo_c) # valor c
+
+c.metodo()
+# B
+# A
+# A
+# B
+# C
