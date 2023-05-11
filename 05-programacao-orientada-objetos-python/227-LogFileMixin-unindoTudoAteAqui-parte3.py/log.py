@@ -18,10 +18,12 @@ class Log:
 
 class LogFileMixin(Log):
     def _log(self, msg):
-        msg_fomatada = f'{msg} ({self.__class__.__name__})'
-        print('Salvando no log:', msg_fomatada)
+        msg_formatada = f'{msg} ({self.__class__.__name__})'
+        print('Salvando no log:', msg_formatada)
+
+        # 'a' para append mode, nao eh desejavel apagar o arquivo anterior de log ja feito, apenas adicionar ao arquivo
         with open(LOG_FILE, 'a') as arquivo:
-            arquivo.write(msg_fomatada)
+            arquivo.write(msg_formatada)
             arquivo.write('\n')
 
 
