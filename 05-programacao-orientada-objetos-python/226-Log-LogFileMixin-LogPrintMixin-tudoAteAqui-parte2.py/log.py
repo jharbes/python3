@@ -1,5 +1,5 @@
 # Abstração
-# Herança - é um
+# Herança - relação de é um
 
 class Log:
     def _log(self, msg):
