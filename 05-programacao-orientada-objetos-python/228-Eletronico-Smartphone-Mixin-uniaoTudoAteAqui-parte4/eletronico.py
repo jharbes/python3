@@ -14,17 +14,17 @@ class Eletronico:
         if self._ligado:
             self._ligado = False
 
-
+# a ordem das classes na heranca fazem diferenca, no caso de termos metodos de mesmo nome em ambas as superclasses sera herdada o metodo da superclasse a esquerda por exemplo
 class Smartphone(Eletronico, LogFileMixin):
     def ligar(self):
-        super().ligar()
+        super().ligar() # está utilizando o metodo original da superclasse
 
         if self._ligado:
             msg = f'{self._nome} está ligado'
             self.log_success(msg)
 
     def desligar(self):
-        super().desligar()
+        super().desligar() # está utilizando o metodo original da superclasse
 
         if not self._ligado:
             msg = f'{self._nome} está desligado'
