@@ -14,10 +14,13 @@
 # É possível criar @property @setter @classmethod
 # @staticmethod e @method como abstratos, para isso
 # use @abstractmethod como decorator mais interno.
+
+# importando a lib de classes abstratas
 from abc import ABC, abstractmethod
 
-
+# o (ABC), junto com o @abstractmethod abaixo torna a classe abstrata, um apenas nao faz isso
 class Log(ABC):
+
     @abstractmethod
     def _log(self, msg): ...
 
@@ -29,6 +32,8 @@ class Log(ABC):
 
 
 class LogPrintMixin(Log):
+
+    # precisamos obrigatoriamente implementar os metodos abstratos como o _log abaixo
     def _log(self, msg):
         print(f'{msg} ({self.__class__.__name__})')
 
