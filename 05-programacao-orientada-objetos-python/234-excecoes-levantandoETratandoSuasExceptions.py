@@ -9,8 +9,11 @@
 # https://docs.python.org/3/library/exceptions.html
 
 # Criando exceções (comum colocar Error ao final)
-# Levantando (raise) / Lançando (throw) exceções
+
+# Levantando (raise) / Lançando (throw) exceções (sao expressoes iguais mas usadas em linguagens diferentes)
+
 # Relançando exceções
+
 # Adicionando notas em exceções (3.11.0)
 
 class MeuError(Exception):
