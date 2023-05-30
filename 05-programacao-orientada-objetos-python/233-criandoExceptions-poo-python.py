@@ -11,5 +11,6 @@
 # Relançando exceções
 # Adicionando notas em exceções (3.11.0)
 
+# convencao de python colocar a palavra 'Error' no final das exceçoes para comunicar um error. herda o Exception, criada a excecao personalizada em python
 class MeuError(Exception):
     ...
