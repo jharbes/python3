@@ -38,8 +38,10 @@ class Ponto:
 p1 = Ponto(1, 2)
 p2 = Ponto(978, 876)
 
+# observe que o metodo dunder __str__ manipulou o retorno para que fosse uma string da maneira que fosse conveniente e nao o retorno usual de local na memoria que o objeto esta vinculado
 print(p1) # (1, 2)
 
+# idem ao anterior porem com informacoes para ajudar os desenvolvedores a conhecerem o objeto, o __repr__ tem a funcao de retornar uma string com mais informacoes no auxilio do desenvolvedor
 print(repr(p2)) # Ponto(x=978, y=876, z='String')
 
 
