@@ -1,4 +1,7 @@
 # Teoria: python Special Methods, Magic Methods ou Dunder Methods
+# sao a mesma coisa, porem com nomes diferentes - o mais conhecido é o dunder
+
+# ja existem na linguagem, nós nao podemos cria-los
 
 # Dunder = Double Underscore = __dunder__
 
