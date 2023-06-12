@@ -29,10 +29,10 @@ class Ponto:
         novo_y = self.y + other.y
         return Ponto(novo_x, novo_y)
 
-    # def __gt__(self, other):
-    #     resultado_self = self.x + self.y
-    #     resultado_other = other.x + other.y
-    #     return resultado_self > resultado_other
+    def __gt__(self, other): # __gt__ -> greater then
+        resultado_self = self.x + self.y
+        resultado_other = other.x + other.y
+        return resultado_self > resultado_other
 
 
 if __name__ == '__main__':
