@@ -20,6 +20,8 @@
 # traceback. Se ele retornar True, exceção no with será
 # suprimidas.
 
+
+# o context manager do open ja existe no python
 #
 # Ex:
 # with open('aula149.txt', 'w') as arquivo:
@@ -41,6 +43,8 @@ class MyOpen:
         self._arquivo.close()
 
 
+
+# em context manager podemos utilizar o with na classe (__enter__ e __exit__), ele chama o metodo __enter__ ao entrar no with e __exit__ ao sair do with
 with MyOpen('240-ContextManager-comClasses-arquivoTexto.txt', 'w') as arquivo:
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n')
