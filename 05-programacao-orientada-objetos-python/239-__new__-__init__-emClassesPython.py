@@ -10,6 +10,8 @@
 
 # object é a super classe de uma classe
 
+# o __new__ que cria o self
+
 class A:
     def __new__(cls, *args, **kwargs):
         instancia = super().__new__(cls)
