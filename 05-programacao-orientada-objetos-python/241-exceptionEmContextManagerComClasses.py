@@ -47,7 +47,7 @@ class MyOpen:
         # return True  # Tratei a exceção
 
 
-with MyOpen('aula149.txt', 'w') as arquivo:
+with MyOpen('241-exceptionEmContextManager-arquivoTexto.txt', 'w') as arquivo:
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n', 123)
     arquivo.write('Linha 3\n')
