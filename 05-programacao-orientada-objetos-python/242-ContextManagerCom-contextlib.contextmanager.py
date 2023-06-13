@@ -16,7 +16,7 @@ def my_open(caminho_arquivo, modo):
         arquivo.close()
 
 
-with my_open('aula150.txt', 'w') as arquivo:
+with my_open('242-ContextManagerCom-contextlib-arquivoTexto.txt', 'w') as arquivo:
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n', 123)
     arquivo.write('Linha 3\n')
