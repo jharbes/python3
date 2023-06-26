@@ -7,6 +7,7 @@ def meu_repr(self):
     return class_repr
 
 
+# cls leia-se class, apenas uma maneira de abreviar para nao usar a palavra reservada
 def adiciona_repr(cls):
     cls.__repr__ = meu_repr
     return cls
