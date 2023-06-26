@@ -44,11 +44,11 @@ portugal = Time('Portugal')
 terra = Planeta('Terra')
 marte = Planeta('Marte')
 
-print(brasil)
-print(portugal)
+print(brasil) # Time({'nome': 'Brasil'})
+print(portugal) # Time({'nome': 'Portugal'})
 
-print(terra)
-print(marte)
+print(terra) # Planeta({'nome': 'Terra'})
+print(marte) # Planeta({'nome': 'Marte'})
 
-print(terra.falar_nome())
-print(marte.falar_nome())
+print(terra.falar_nome()) # Você está em casa
+print(marte.falar_nome()) # O planeta é Marte
