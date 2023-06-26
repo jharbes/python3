@@ -1,8 +1,9 @@
 # Metaclasses são o tipo das classes
+
 # EM PYTHON, TUDO É UM OBJETO (CLASSES TAMBÉM)
 # Então, qual é o tipo de uma classe? (type)
 # Seu objeto é uma instância da sua classe
-# Sua classe é uma instância de type (type é uma metaclass)
+# Sua classe é uma instância de type (type é uma metaclasse)
 # type('Name', (Bases,), __dict__)
 #
 # Ao criar uma classe, coisas ocorrem por padrão nessa ordem:
@@ -27,9 +28,16 @@
 # class Foo:
 #     ...
 
-
+# a funcao type é quem cria novas classes em python, logo podemos criar a classe Foo com a funcao type abaixo.
+# no caso abaixo 'Foo' (primeiro argumento) é o nome da classe
+# (object,) são as heranças da classe
+# {} é o dict da própria classe
 Foo = type('Foo', (object,), {})
+
 f = Foo()
-# print(isinstance(f, Foo))
-print(type(f))
-print(type(Foo))
+
+print(isinstance(f, Foo)) # True
+
+print(type(f)) # <class '__main__.Foo'>
+
+print(type(Foo)) # <class 'type'>
