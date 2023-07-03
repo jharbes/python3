@@ -17,7 +17,7 @@ stringQualquer.isdigit() # True ou False
 # objeto da execução, caso ele esteja sendo importado, por exemplo, ele não
 # executará o bloco em questao
 
-if __name__==='__main__':
+if __name__=='__main__':
     pass
 
 
@@ -90,7 +90,7 @@ except Exception as error:
 # for em python (com indice)
 
 for indice,item in enumerate(vetorOuString):
-    print(letra)
+            print(letra)
             
             
             
@@ -125,3 +125,20 @@ def formatacaoMoeda(valor):
 def formatacaoPercentual(valor):
     valor*=100
     return '{}%'.format(round(valor,2))
+
+
+
+
+
+# VALIDACAO PARA INPUT NUMERICO:
+while True:
+    idade=input('Digite sua idade: ')
+    try:
+        idade=int(idade)
+        if idade>=0 and idade<=150:
+            break
+        else:
+            print('\nVALOR INVÁLIDO! Idade deve ser entre 0 e 150 anos!')
+            continue
+    except:
+        print('\nVALOR INVÁLIDO! Idade deve ser entre 0 e 150 anos!')
