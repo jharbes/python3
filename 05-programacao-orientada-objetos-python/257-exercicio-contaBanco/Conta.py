@@ -13,7 +13,7 @@ class Conta(ABC):
 
     def depositar(self,valor):
         self.saldo+=valor
-        self.detalhes('DEPÓSITO VALOR {}'.format(formatacaoMoeda(valor)))
+        self.detalhes('DEPÓSITO VALOR {} EFETIVADO\n'.format(formatacaoMoeda(valor)))
 
     def detalhes(self,msg=''):
-        print('SALDO DA CONTA {} - {}'.format(formatacaoMoeda(self.saldo),msg))
+        print('{} - SALDO DA CONTA ATUAL: {}\n'.format(msg,formatacaoMoeda(self.saldo)))

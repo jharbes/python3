@@ -1,11 +1,11 @@
 from funcoesAuxiliares import formatacaoMoeda
-import Conta
+from Conta import Conta
 
 class ContaPoupanca(Conta):
 
     def sacar(self,valor):
         if self.saldo>=valor:
             self.saldo-=valor
-            self.detalhes('SAQUE VALOR {}'.format(formatacaoMoeda(valor)))
+            self.detalhes('SAQUE VALOR {} EFETIVADO\n'.format(formatacaoMoeda(valor)))
         else:
-            self.detalhes('SALDO INSUFICIENTE')
+            self.detalhes('SALDO INSUFICIENTE\n')
