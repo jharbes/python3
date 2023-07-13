@@ -2,7 +2,9 @@ import enum
 
 # Direcoes = enum.Enum('Direcoes', ['ESQUERDA', 'DIREITA'])
 
+# ou
 
+# podemos numerar as opcoes manualmente ou podemos usar como abaixo para que seja feita a enumeracao automatica (enum.auto()), que começará do 1.
 class Direcoes(enum.Enum):
     ESQUERDA = enum.auto()
     DIREITA = enum.auto()
@@ -11,9 +13,13 @@ class Direcoes(enum.Enum):
 
 
 
+# observe que os valores de enum podem ser mencionados de tres maneiras diferentes
 print(Direcoes(1), Direcoes['ESQUERDA'], Direcoes.ESQUERDA) # Direcoes.ESQUERDA Direcoes.ESQUERDA Direcoes.ESQUERDA
 
-print(Direcoes(1).name, Direcoes.ESQUERDA.value) # ESQUERDA 1
+
+# como chamar o nome (nome e valor)
+print(Direcoes(1).name) # ESQUERDA
+print(Direcoes.ESQUERDA.value) # 1
 
 
 
