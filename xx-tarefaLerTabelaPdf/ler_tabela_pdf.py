@@ -6,7 +6,7 @@ col_areas=[(202.455,3.63,432.135,77.88),(200.475,79.86,430.155,92.73),(201.465,9
 def ler_pdf_padrao(path):
     tabela=pd.DataFrame()
     for col in col_areas:
-        col1=tabula.read_pdf(r'teste.pdf',pages=1,area=col,stream=True)
+        col1=tabula.read_pdf(path,pages=1,area=col,stream=True)
         col1=col1[0]
         col1=pd.DataFrame(col1)
         tabela= pd.concat([tabela, col1], ignore_index=False,axis=1)
